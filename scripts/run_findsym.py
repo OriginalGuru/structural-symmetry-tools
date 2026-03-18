@@ -5,23 +5,17 @@ run_findsym.py
 Generate a FINDSYM input file from a POSCAR and run findsym, writing
 a human-readable log and a CIF file.
 
-This script calls poscar_to_findsym.py logic internally, then runs
-findsym as a subprocess. findsym must be on PATH and the ISODATA
-environment variable must be set.
-
-Required files in the working directory
-----------------------------------------
-    POSCAR      VASP input structure
-
-Required environment
---------------------
-    findsym     On PATH (e.g. $WORK/software/isotropy/findsym)
-    ISODATA     Set to the isotropy data directory with trailing slash
-                (e.g. /work/01253/guru/ls6/software/isotropy/)
+findsym must be on PATH and ISODATA must be set. The script changes
+into the directory containing the POSCAR before calling findsym, so
+that the input path passed to the Fortran executable stays short.
 
 Usage
 -----
-    python run_findsym.py [options]
+    python run_findsym.py [POSCAR] [options]
+
+Arguments
+---------
+    POSCAR                  Path to POSCAR file (default: ./POSCAR)
 
 Options
 -------
@@ -38,10 +32,18 @@ Output
     findsym.log     Human-readable space group identification
     findsym.cif     CIF file of the identified structure
 
-Example
--------
+    Both files are written to the same directory as the POSCAR.
+
+Examples
+--------
+    # Run on POSCAR in current directory
     python scripts/run_findsym.py
-    python scripts/run_findsym.py --postol 0.01 --output-stem distorted
+
+    # Run on a displaced POSCAR
+    python scripts/run_findsym.py POSCAR_phonon_30_-0.086THz_0.1Ang
+
+    # Looser tolerance, custom output stem
+    python scripts/run_findsym.py POSCAR_sam_3_0.1Ang --postol 0.01 --output-stem distorted_sam3
 """
 
 import os
@@ -52,57 +54,37 @@ import shutil
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from vasp_phonon_tools import support
-from scripts.poscar_to_findsym import write_findsym_input
+
+# Import write_findsym_input directly — avoids module path issues
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from poscar_to_findsym import write_findsym_input
 
 
 def check_findsym_available():
-    """Exit with a clear message if findsym is not on PATH or ISODATA is unset."""
     if shutil.which('findsym') is None:
         print('Error: findsym not found on PATH.')
-        print('       Add the isotropy directory to PATH, e.g.:')
         print('       export PATH=$PATH:$WORK/software/isotropy')
         sys.exit(1)
-
     if not os.environ.get('ISODATA'):
         print('Error: ISODATA environment variable is not set.')
-        print('       Set it to the isotropy data directory with a trailing slash, e.g.:')
         print('       export ISODATA=$WORK/software/isotropy/')
         sys.exit(1)
 
 
 def split_log_and_cif(stdout_text):
-    """
-    Split findsym stdout into the human-readable log section and the CIF section.
-
-    findsym writes both to stdout. The CIF block begins with a line
-    starting with '# CIF file'.
-
-    Returns
-    -------
-    log_text : str
-    cif_text : str or None
-    """
+    """Split findsym stdout into log section and CIF section."""
     lines     = stdout_text.splitlines(keepends=True)
     cif_start = None
-
     for i, line in enumerate(lines):
         if line.startswith('# CIF file'):
             cif_start = i
             break
-
     if cif_start is None:
         return stdout_text, None
-
-    log_text = ''.join(lines[:cif_start])
-    cif_text = ''.join(lines[cif_start:])
-    return log_text, cif_text
+    return ''.join(lines[:cif_start]), ''.join(lines[cif_start:])
 
 
 def extract_space_group(log_text):
-    """
-    Extract the space group line from findsym log text for summary printing.
-    Returns the line as a string, or None if not found.
-    """
     for line in log_text.splitlines():
         if line.startswith('Space Group:'):
             return line.strip()
@@ -113,6 +95,8 @@ def main():
     parser = argparse.ArgumentParser(
         description='Run FINDSYM on a POSCAR and write log and CIF output.'
     )
+    parser.add_argument('poscar', nargs='?', default='POSCAR',
+                        help='Path to POSCAR file (default: ./POSCAR)')
     parser.add_argument('--input', default=None,
                         help='Use an existing findsym input file instead of '
                              'generating one from POSCAR')
@@ -128,38 +112,40 @@ def main():
 
     check_findsym_available()
 
-    path = os.getcwd()
+    poscar_path = os.path.abspath(args.poscar)
+    if not os.path.isfile(poscar_path):
+        print(f'Error: POSCAR file not found: {poscar_path}')
+        sys.exit(1)
 
-    # --- Generate or use existing input file ---
+    # All output goes alongside the POSCAR
+    work_dir = os.path.dirname(poscar_path)
+
+    # --- Generate or locate input file ---
     generated_input = False
     if args.input:
-        input_path = os.path.join(path, args.input)
+        input_filename = args.input
+        input_path     = os.path.join(work_dir, input_filename)
         if not os.path.isfile(input_path):
             print(f'Error: specified input file not found: {input_path}')
             sys.exit(1)
-        print(f'Using existing input file: {args.input}')
+        print(f'Using existing input file: {input_filename}')
     else:
-        poscar_path = os.path.join(path, 'POSCAR')
-        if not os.path.isfile(poscar_path):
-            print(f'Error: POSCAR not found in {path}')
-            sys.exit(1)
-        input_path = os.path.join(path, 'findsym_input.txt')
-        poscar_lines = support.read_file_lines(poscar_path)
-        write_findsym_input(
-            poscar_lines, input_path,
-            lattol=args.lattol,
-            postol=args.postol
-        )
+        input_filename = 'findsym_input.txt'
+        input_path     = os.path.join(work_dir, input_filename)
+        poscar_lines   = support.read_file_lines(poscar_path)
+        write_findsym_input(poscar_lines, input_path,
+                            lattol=args.lattol, postol=args.postol)
         generated_input = True
-        print(f'Generated: findsym_input.txt')
+        print(f'Generated: {input_filename}')
 
-    # --- Run findsym ---
-    print(f'Running findsym...')
+    # --- Run findsym from the work directory so the path stays short ---
+    print('Running findsym...')
     try:
         result = subprocess.run(
-            ['findsym', input_path],
+            ['findsym', input_filename],
             capture_output=True,
-            text=True
+            text=True,
+            cwd=work_dir          # <-- key fix: short filename, correct cwd
         )
     except Exception as e:
         print(f'Error running findsym: {e}')
@@ -174,26 +160,24 @@ def main():
     # --- Split and write output ---
     log_text, cif_text = split_log_and_cif(result.stdout)
 
-    log_path = os.path.join(path, f'{args.output_stem}.log')
+    log_path = os.path.join(work_dir, f'{args.output_stem}.log')
     with open(log_path, 'w') as f:
         f.write(log_text)
-    print(f'Written: {args.output_stem}.log')
+    print(f'Written: {log_path}')
 
     if cif_text:
-        cif_path = os.path.join(path, f'{args.output_stem}.cif')
+        cif_path = os.path.join(work_dir, f'{args.output_stem}.cif')
         with open(cif_path, 'w') as f:
             f.write(cif_text)
-        print(f'Written: {args.output_stem}.cif')
+        print(f'Written: {cif_path}')
     else:
         print('Warning: no CIF block found in findsym output.')
 
-    # --- Print space group summary ---
     sg_line = extract_space_group(log_text)
     if sg_line:
         print()
         print(f'Result: {sg_line}')
 
-    # --- Clean up generated input file unless --keep-input ---
     if generated_input and not args.keep_input:
         os.remove(input_path)
 
