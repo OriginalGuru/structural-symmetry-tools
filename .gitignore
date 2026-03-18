@@ -28,3 +28,5 @@ XDATCAR
 !examples/*/symmetry_list
 !examples/*/expected_output.txt
 examples/*/output.txt
+examples/*/vasprun.xml
+examples/*/output.txt
