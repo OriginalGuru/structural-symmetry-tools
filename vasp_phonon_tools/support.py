@@ -758,8 +758,7 @@ def displace_poscar_atoms(poscar_lines, displacement_vector, amplitude, label):
         working[8 + i] = " ".join(str(x) for x in new_positions[i])
 
     result = poscar_to_direct(working)
-    result[0] = (poscar_lines[0].rstrip()
-                 + f" | displaced: {label}, amplitude: {amplitude} Ang\n")
+    result[0] = poscar_lines[0].rstrip() + " | " + label + "\n"
 
     # Format positions to 16 decimal places
     for i in range(n_atoms):
