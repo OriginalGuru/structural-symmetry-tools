@@ -73,6 +73,16 @@ python scripts/displace_poscar_phonon.py <mode_index> <amplitude>
 python scripts/displace_poscar_phonon.py 5 0.1
 ```
 
+### Validate output against a reference
+```bash
+python scripts/validate_output.py output.txt examples/SrTiO3/expected_output.txt
+```
+
+Checks frequency, force constant, reduced mass, and |Z*| for each mode.
+Sign-dependent quantities (Z*_x/y/z, SAM amplitudes) are intentionally
+skipped — these are not invariant across platforms or numpy versions.
+See `docs/coordinate_conventions.md` for explanation.
+
 ### Displace a POSCAR along a symmetry-adapted mode
 
 Single SAM:

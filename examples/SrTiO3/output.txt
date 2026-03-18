@@ -1,0 +1,405 @@
+
+Warning: born_charges not found in vasprun.xml.
+         Constructing diagonal BEC from ZVAL (rigid-ion approximation).
+         Phonon frequencies and eigenvectors are unaffected.
+         Mode effective charges (Z*) will be approximate.
+
+Phonon    Frequency         Force Constant    Reduced Mass      Z*_x              Z*_y              Z*_z              |Z*|  [Z* approximate: rigid-ion]
+Mode      (THz)             (eV/A2)           (AMU)             (e)               (e)               (e)               (e)
++01   +1.445930099142   +0.137750544499  +16.102758859840   +0.000000000000   +0.000000000000   +0.000000000000   +0.000000000000
++02   +1.037358824011   +0.070491448396  +16.009581704890   +0.000000000000   +0.000000000000   +0.383779208874   +0.383779208874
++03   +1.037327479312   +0.070487083502  +16.009557848020   +0.000000000000   +0.385425944308   +0.000000000000   +0.385425944308
++04   +1.037327479312   +0.070487083502  +16.009557848020   +0.385425944308   +0.000000000000   +0.000000000000   +0.385425944308
++05   +1.019728148711   +0.112963344777  +26.550352367965   +0.000000000000   +0.000000000000   +0.000000000000   +0.000000000000
++06   +0.982564202467   +0.063206607612  +16.000817375509   +0.000000000000   +0.000000000000   +0.000000000000   +0.000000000000
++07   +0.982564202467   +0.063206607612  +16.000817375509   +0.000000000000   +0.000000000000   +0.000000000000   +0.000000000000
++08   +0.604062836405   +0.023897501058  +16.006258119911   +0.000000000000   +0.000000000000   +0.000000000000   +0.000000000000
++09   +0.604062836405   +0.023897501058  +16.006258119911   +0.000000000000   +0.000000000000   +0.000000000000   +0.000000000000
++10   +0.542051429964   +0.026294275089  +21.871661458785   +0.000000000000   +0.000000000000   +0.000000000000   +0.000000000000
++11   +0.533692580050   +0.018646647055  +16.000000000000   +0.000000000000   +0.000000000000   +0.000000000000   +0.000000000000
++12   +0.450528199221   +0.013288084481  +16.000000038609   -0.002437589844   +0.000000000000   +0.000000000000   +0.002437589844
++13   +0.450528199221   +0.013288084481  +16.000000038609   +0.000000000000   -0.002437589844   +0.000000000000   +0.002437589844
++14   +0.450433335800   +0.013282489148  +16.000000000000   +0.000000000000   +0.000000000000   +0.000000000000   +0.000000000000
++15   +0.327087469081   +0.007153057968  +16.340505730340   +0.000000000000   +0.000000000000   +0.000000000000   +0.000000000000
++16   +0.327087469081   +0.007153057968  +16.340505730340   +0.000000000000   +0.000000000000   +0.000000000000   +0.000000000000
++17   +0.323314813139   +0.036210543308  +84.661390477287   +0.000000000000   +0.000000000000   +0.000000000000   +0.000000000000
++18   +0.311744593381   +0.021492067365  +54.048282083088   +0.000000000000  -10.962573769732   +0.000000000000  +10.962573769732
++19   +0.311744593381   +0.021492067365  +54.048282083088  +10.962573769732   +0.000000000000   +0.000000000000  +10.962573769732
++20   +0.311437490284   +0.021430125536  +53.998848021734   +0.000000000000   +0.000000000000  -10.965968385009  +10.965968385009
++21   +0.213092950614   +0.008372541555  +45.063062960447   +0.000000000000   +0.000000000000   +0.000000000000   +0.000000000000
++22   +0.213092950614   +0.008372541555  +45.063062960447   +0.000000000000   +0.000000000000   +0.000000000000   +0.000000000000
++23   +0.208011633507   +0.015479183955  +87.432797474003   +0.000000000000   +0.000000000000   +0.000000000000   +0.000000000000
++24   +0.208011633507   +0.015479183955  +87.432797474003   +0.000000000000   +0.000000000000   +0.000000000000   +0.000000000000
++25   +0.001912783389   +0.000000567474  +37.906693698051  -25.498055837508   +0.000000000489   -0.000000000312  +25.498055837508
++26   +0.001912783389   +0.000000567474  +37.906693698051   +0.000000000490  +25.498055837508   +0.000000001821  +25.498055837508
++27   +0.000202219932   +0.000000006163  +36.833439903242   -0.000000000306   -0.000000001782  +25.322313329184  +25.322313329184
++28   -0.084753807414   +0.000588373655  +20.018721875028   +6.950861225893   +0.000000000000   +0.000000000000   +6.950861225893
++29   -0.084753807414   +0.000588373655  +20.018721875028   +0.000000000000   +6.950861225893   +0.000000000000   +6.950861225893
++30   -0.086060856385   +0.000616353301  +20.338548786562   +0.000000000000   +0.000000000000   -6.617089420670   +6.617089420670
+
+
+Phonon    Frequency         Force Constant    Reduced Mass      Z*_x              Z*_y              Z*_z              |Z*|  [Z* approximate: rigid-ion]
+Mode      (THz)             (eV/A2)           (AMU)             (e)               (e)               (e)               (e)
++01   +1.445930099142   +0.137750544499  +16.102758859840   +0.000000000000   +0.000000000000   +0.000000000000   +0.000000000000
+
+
+	    Symmetry Adapted Mode Decomposition (amplitudes below 10^-2 suppressed)
+	    Mode Index      Amplitude         Irreducible Representation
+	    25             0.062478265171   X3-(0;0;a)[Sr1:a:dsp]T1u(a)
+	    26            -0.704341157665   X3-(0;0;a)[O1:c:dsp]A2u(a)
+
+
+Phonon    Frequency         Force Constant    Reduced Mass      Z*_x              Z*_y              Z*_z              |Z*|  [Z* approximate: rigid-ion]
+Mode      (THz)             (eV/A2)           (AMU)             (e)               (e)               (e)               (e)
++02   +1.037358824011   +0.070491448396  +16.009581704890   +0.000000000000   +0.000000000000   +0.383779208874   +0.383779208874
+
+
+	    Symmetry Adapted Mode Decomposition (amplitudes below 10^-2 suppressed)
+	    Mode Index      Amplitude         Irreducible Representation
+	    03            -0.019062208026   GM4-(a,b,c)[Sr1:a:dsp]T1u(c)
+	    09             0.592589700171   GM4-(a,b,c)[O1:c:dsp]A2u(c)
+	    12            -0.272461669998   GM4-(a,b,c)[O1:c:dsp]Eu(c)
+
+
+Phonon    Frequency         Force Constant    Reduced Mass      Z*_x              Z*_y              Z*_z              |Z*|  [Z* approximate: rigid-ion]
+Mode      (THz)             (eV/A2)           (AMU)             (e)               (e)               (e)               (e)
++03   +1.037327479312   +0.070487083502  +16.009557848020   +0.000000000000   +0.385425944308   +0.000000000000   +0.385425944308
+
+
+	    Symmetry Adapted Mode Decomposition (amplitudes below 10^-2 suppressed)
+	    Mode Index      Amplitude         Irreducible Representation
+	    02            -0.019047928862   GM4-(a,b,c)[Sr1:a:dsp]T1u(b)
+	    08             0.592583923955   GM4-(a,b,c)[O1:c:dsp]A2u(b)
+	    11            -0.272468863785   GM4-(a,b,c)[O1:c:dsp]Eu(b)
+
+
+Phonon    Frequency         Force Constant    Reduced Mass      Z*_x              Z*_y              Z*_z              |Z*|  [Z* approximate: rigid-ion]
+Mode      (THz)             (eV/A2)           (AMU)             (e)               (e)               (e)               (e)
++04   +1.037327479312   +0.070487083502  +16.009557848020   +0.385425944308   +0.000000000000   +0.000000000000   +0.385425944308
+
+
+	    Symmetry Adapted Mode Decomposition (amplitudes below 10^-2 suppressed)
+	    Mode Index      Amplitude         Irreducible Representation
+	    01            -0.019047928862   GM4-(a,b,c)[Sr1:a:dsp]T1u(a)
+	    07             0.592583923955   GM4-(a,b,c)[O1:c:dsp]A2u(a)
+	    10            -0.272468863785   GM4-(a,b,c)[O1:c:dsp]Eu(a)
+
+
+Phonon    Frequency         Force Constant    Reduced Mass      Z*_x              Z*_y              Z*_z              |Z*|  [Z* approximate: rigid-ion]
+Mode      (THz)             (eV/A2)           (AMU)             (e)               (e)               (e)               (e)
++05   +1.019728148711   +0.112963344777  +26.550352367965   +0.000000000000   +0.000000000000   +0.000000000000   +0.000000000000
+
+
+	    Symmetry Adapted Mode Decomposition (amplitudes below 10^-2 suppressed)
+	    Mode Index      Amplitude         Irreducible Representation
+	    16            -0.546262332023   X1+(0;0;a)[Ti1:b:dsp]T1u(a)
+	    17             0.317488160892   X1+(0;0;a)[O1:c:dsp]Eu(a)
+
+
+Phonon    Frequency         Force Constant    Reduced Mass      Z*_x              Z*_y              Z*_z              |Z*|  [Z* approximate: rigid-ion]
+Mode      (THz)             (eV/A2)           (AMU)             (e)               (e)               (e)               (e)
++06   +0.982564202467   +0.063206607612  +16.000817375509   +0.000000000000   +0.000000000000   +0.000000000000   +0.000000000000
+
+
+	    Symmetry Adapted Mode Decomposition (amplitudes below 10^-2 suppressed)
+	    Mode Index      Amplitude         Irreducible Representation
+	    21            -0.017688895504   X5+(0,0;0,0;a,b)[O1:c:dsp]A2u(a)
+	    22            -0.628903499539   X5+(0,0;0,0;a,b)[O1:c:dsp]A2u(b)
+	    24             0.322562891280   X5+(0,0;0,0;a,b)[O1:c:dsp]Eu(b)
+
+
+Phonon    Frequency         Force Constant    Reduced Mass      Z*_x              Z*_y              Z*_z              |Z*|  [Z* approximate: rigid-ion]
+Mode      (THz)             (eV/A2)           (AMU)             (e)               (e)               (e)               (e)
++07   +0.982564202467   +0.063206607612  +16.000817375509   +0.000000000000   +0.000000000000   +0.000000000000   +0.000000000000
+
+
+	    Symmetry Adapted Mode Decomposition (amplitudes below 10^-2 suppressed)
+	    Mode Index      Amplitude         Irreducible Representation
+	    21             0.628903499539   X5+(0,0;0,0;a,b)[O1:c:dsp]A2u(a)
+	    22            -0.017688895504   X5+(0,0;0,0;a,b)[O1:c:dsp]A2u(b)
+	    23            -0.322562891280   X5+(0,0;0,0;a,b)[O1:c:dsp]Eu(a)
+
+
+Phonon    Frequency         Force Constant    Reduced Mass      Z*_x              Z*_y              Z*_z              |Z*|  [Z* approximate: rigid-ion]
+Mode      (THz)             (eV/A2)           (AMU)             (e)               (e)               (e)               (e)
++08   +0.604062836405   +0.023897501058  +16.006258119911   +0.000000000000   +0.000000000000   +0.000000000000   +0.000000000000
+
+
+	    Symmetry Adapted Mode Decomposition (amplitudes below 10^-2 suppressed)
+	    Mode Index      Amplitude         Irreducible Representation
+	    27            -0.015464878074   X5-(0,0;0,0;a,b)[Sr1:a:dsp]T1u(a)
+	    29            -0.706937647566   X5-(0,0;0,0;a,b)[O1:c:dsp]Eu(a)
+
+
+Phonon    Frequency         Force Constant    Reduced Mass      Z*_x              Z*_y              Z*_z              |Z*|  [Z* approximate: rigid-ion]
+Mode      (THz)             (eV/A2)           (AMU)             (e)               (e)               (e)               (e)
++09   +0.604062836405   +0.023897501058  +16.006258119911   +0.000000000000   +0.000000000000   +0.000000000000   +0.000000000000
+
+
+	    Symmetry Adapted Mode Decomposition (amplitudes below 10^-2 suppressed)
+	    Mode Index      Amplitude         Irreducible Representation
+	    28             0.015464878074   X5-(0,0;0,0;a,b)[Sr1:a:dsp]T1u(b)
+	    30             0.706937647566   X5-(0,0;0,0;a,b)[O1:c:dsp]Eu(b)
+
+
+Phonon    Frequency         Force Constant    Reduced Mass      Z*_x              Z*_y              Z*_z              |Z*|  [Z* approximate: rigid-ion]
+Mode      (THz)             (eV/A2)           (AMU)             (e)               (e)               (e)               (e)
++10   +0.542051429964   +0.026294275089  +21.871661458785   +0.000000000000   +0.000000000000   +0.000000000000   +0.000000000000
+
+
+	    Symmetry Adapted Mode Decomposition (amplitudes below 10^-2 suppressed)
+	    Mode Index      Amplitude         Irreducible Representation
+	    16             0.448996063026   X1+(0;0;a)[Ti1:b:dsp]T1u(a)
+	    17             0.386265799280   X1+(0;0;a)[O1:c:dsp]Eu(a)
+
+
+Phonon    Frequency         Force Constant    Reduced Mass      Z*_x              Z*_y              Z*_z              |Z*|  [Z* approximate: rigid-ion]
+Mode      (THz)             (eV/A2)           (AMU)             (e)               (e)               (e)               (e)
++11   +0.533692580050   +0.018646647055  +16.000000000000   +0.000000000000   +0.000000000000   +0.000000000000   +0.000000000000
+
+
+	    Symmetry Adapted Mode Decomposition (amplitudes below 10^-2 suppressed)
+	    Mode Index      Amplitude         Irreducible Representation
+	    18             0.500000000000   X2+(0;0;a)[O1:c:dsp]Eu(a)
+
+
+Phonon    Frequency         Force Constant    Reduced Mass      Z*_x              Z*_y              Z*_z              |Z*|  [Z* approximate: rigid-ion]
+Mode      (THz)             (eV/A2)           (AMU)             (e)               (e)               (e)               (e)
++12   +0.450528199221   +0.013288084481  +16.000000038609   -0.002437589844   +0.000000000000   +0.000000000000   +0.002437589844
+
+
+	    Symmetry Adapted Mode Decomposition (amplitudes below 10^-2 suppressed)
+	    Mode Index      Amplitude         Irreducible Representation
+	    14            -0.499999995507   GM5-(a,b,c)[O1:c:dsp]Eu(b)
+
+
+Phonon    Frequency         Force Constant    Reduced Mass      Z*_x              Z*_y              Z*_z              |Z*|  [Z* approximate: rigid-ion]
+Mode      (THz)             (eV/A2)           (AMU)             (e)               (e)               (e)               (e)
++13   +0.450528199221   +0.013288084481  +16.000000038609   +0.000000000000   -0.002437589844   +0.000000000000   +0.002437589844
+
+
+	    Symmetry Adapted Mode Decomposition (amplitudes below 10^-2 suppressed)
+	    Mode Index      Amplitude         Irreducible Representation
+	    15             0.499999995507   GM5-(a,b,c)[O1:c:dsp]Eu(c)
+
+
+Phonon    Frequency         Force Constant    Reduced Mass      Z*_x              Z*_y              Z*_z              |Z*|  [Z* approximate: rigid-ion]
+Mode      (THz)             (eV/A2)           (AMU)             (e)               (e)               (e)               (e)
++14   +0.450433335800   +0.013282489148  +16.000000000000   +0.000000000000   +0.000000000000   +0.000000000000   +0.000000000000
+
+
+	    Symmetry Adapted Mode Decomposition (amplitudes below 10^-2 suppressed)
+	    Mode Index      Amplitude         Irreducible Representation
+	    13             0.500000000000   GM5-(a,b,c)[O1:c:dsp]Eu(a)
+
+
+Phonon    Frequency         Force Constant    Reduced Mass      Z*_x              Z*_y              Z*_z              |Z*|  [Z* approximate: rigid-ion]
+Mode      (THz)             (eV/A2)           (AMU)             (e)               (e)               (e)               (e)
++15   +0.327087469081   +0.007153057968  +16.340505730340   +0.000000000000   +0.000000000000   +0.000000000000   +0.000000000000
+
+
+	    Symmetry Adapted Mode Decomposition (amplitudes below 10^-2 suppressed)
+	    Mode Index      Amplitude         Irreducible Representation
+	    19             0.095024056281   X5+(0,0;0,0;a,b)[Ti1:b:dsp]T1u(a)
+	    20            -0.081355038539   X5+(0,0;0,0;a,b)[Ti1:b:dsp]T1u(b)
+	    21             0.242008149078   X5+(0,0;0,0;a,b)[O1:c:dsp]A2u(a)
+	    22            -0.207195767741   X5+(0,0;0,0;a,b)[O1:c:dsp]A2u(b)
+	    23             0.470021407697   X5+(0,0;0,0;a,b)[O1:c:dsp]Eu(a)
+	    24            -0.402409781627   X5+(0,0;0,0;a,b)[O1:c:dsp]Eu(b)
+
+
+Phonon    Frequency         Force Constant    Reduced Mass      Z*_x              Z*_y              Z*_z              |Z*|  [Z* approximate: rigid-ion]
+Mode      (THz)             (eV/A2)           (AMU)             (e)               (e)               (e)               (e)
++16   +0.327087469081   +0.007153057968  +16.340505730340   +0.000000000000   +0.000000000000   +0.000000000000   +0.000000000000
+
+
+	    Symmetry Adapted Mode Decomposition (amplitudes below 10^-2 suppressed)
+	    Mode Index      Amplitude         Irreducible Representation
+	    19            -0.081355038539   X5+(0,0;0,0;a,b)[Ti1:b:dsp]T1u(a)
+	    20            -0.095024056281   X5+(0,0;0,0;a,b)[Ti1:b:dsp]T1u(b)
+	    21            -0.207195767741   X5+(0,0;0,0;a,b)[O1:c:dsp]A2u(a)
+	    22            -0.242008149078   X5+(0,0;0,0;a,b)[O1:c:dsp]A2u(b)
+	    23            -0.402409781627   X5+(0,0;0,0;a,b)[O1:c:dsp]Eu(a)
+	    24            -0.470021407697   X5+(0,0;0,0;a,b)[O1:c:dsp]Eu(b)
+
+
+Phonon    Frequency         Force Constant    Reduced Mass      Z*_x              Z*_y              Z*_z              |Z*|  [Z* approximate: rigid-ion]
+Mode      (THz)             (eV/A2)           (AMU)             (e)               (e)               (e)               (e)
++17   +0.323314813139   +0.036210543308  +84.661390477287   +0.000000000000   +0.000000000000   +0.000000000000   +0.000000000000
+
+
+	    Symmetry Adapted Mode Decomposition (amplitudes below 10^-2 suppressed)
+	    Mode Index      Amplitude         Irreducible Representation
+	    25            -0.704341157665   X3-(0;0;a)[Sr1:a:dsp]T1u(a)
+	    26            -0.062478265171   X3-(0;0;a)[O1:c:dsp]A2u(a)
+
+
+Phonon    Frequency         Force Constant    Reduced Mass      Z*_x              Z*_y              Z*_z              |Z*|  [Z* approximate: rigid-ion]
+Mode      (THz)             (eV/A2)           (AMU)             (e)               (e)               (e)               (e)
++18   +0.311744593381   +0.021492067365  +54.048282083088   +0.000000000000  -10.962573769732   +0.000000000000  +10.962573769732
+
+
+	    Symmetry Adapted Mode Decomposition (amplitudes below 10^-2 suppressed)
+	    Mode Index      Amplitude         Irreducible Representation
+	    02             0.479717924890   GM4-(a,b,c)[Sr1:a:dsp]T1u(b)
+	    05            -0.496110388040   GM4-(a,b,c)[Ti1:b:dsp]T1u(b)
+	    08            -0.073924492280   GM4-(a,b,c)[O1:c:dsp]A2u(b)
+	    11            -0.095604298250   GM4-(a,b,c)[O1:c:dsp]Eu(b)
+
+
+Phonon    Frequency         Force Constant    Reduced Mass      Z*_x              Z*_y              Z*_z              |Z*|  [Z* approximate: rigid-ion]
+Mode      (THz)             (eV/A2)           (AMU)             (e)               (e)               (e)               (e)
++19   +0.311744593381   +0.021492067365  +54.048282083088  +10.962573769732   +0.000000000000   +0.000000000000  +10.962573769732
+
+
+	    Symmetry Adapted Mode Decomposition (amplitudes below 10^-2 suppressed)
+	    Mode Index      Amplitude         Irreducible Representation
+	    01            -0.479717924890   GM4-(a,b,c)[Sr1:a:dsp]T1u(a)
+	    04             0.496110388040   GM4-(a,b,c)[Ti1:b:dsp]T1u(a)
+	    07             0.073924492280   GM4-(a,b,c)[O1:c:dsp]A2u(a)
+	    10             0.095604298250   GM4-(a,b,c)[O1:c:dsp]Eu(a)
+
+
+Phonon    Frequency         Force Constant    Reduced Mass      Z*_x              Z*_y              Z*_z              |Z*|  [Z* approximate: rigid-ion]
+Mode      (THz)             (eV/A2)           (AMU)             (e)               (e)               (e)               (e)
++20   +0.311437490284   +0.021430125536  +53.998848021734   +0.000000000000   +0.000000000000  -10.965968385009  +10.965968385009
+
+
+	    Symmetry Adapted Mode Decomposition (amplitudes below 10^-2 suppressed)
+	    Mode Index      Amplitude         Irreducible Representation
+	    03             0.480339498252   GM4-(a,b,c)[Sr1:a:dsp]T1u(c)
+	    06            -0.495166057705   GM4-(a,b,c)[Ti1:b:dsp]T1u(c)
+	    09            -0.074575264420   GM4-(a,b,c)[O1:c:dsp]A2u(c)
+	    12            -0.096236873527   GM4-(a,b,c)[O1:c:dsp]Eu(c)
+
+
+Phonon    Frequency         Force Constant    Reduced Mass      Z*_x              Z*_y              Z*_z              |Z*|  [Z* approximate: rigid-ion]
+Mode      (THz)             (eV/A2)           (AMU)             (e)               (e)               (e)               (e)
++21   +0.213092950614   +0.008372541555  +45.063062960447   +0.000000000000   +0.000000000000   +0.000000000000   +0.000000000000
+
+
+	    Symmetry Adapted Mode Decomposition (amplitudes below 10^-2 suppressed)
+	    Mode Index      Amplitude         Irreducible Representation
+	    19            -0.349031062028   X5+(0,0;0,0;a,b)[Ti1:b:dsp]T1u(a)
+	    20             0.602072041853   X5+(0,0;0,0;a,b)[Ti1:b:dsp]T1u(b)
+	    21             0.025912696162   X5+(0,0;0,0;a,b)[O1:c:dsp]A2u(a)
+	    22            -0.044698915327   X5+(0,0;0,0;a,b)[O1:c:dsp]A2u(b)
+	    23             0.057221358870   X5+(0,0;0,0;a,b)[O1:c:dsp]Eu(a)
+	    24            -0.098705771836   X5+(0,0;0,0;a,b)[O1:c:dsp]Eu(b)
+
+
+Phonon    Frequency         Force Constant    Reduced Mass      Z*_x              Z*_y              Z*_z              |Z*|  [Z* approximate: rigid-ion]
+Mode      (THz)             (eV/A2)           (AMU)             (e)               (e)               (e)               (e)
++22   +0.213092950614   +0.008372541555  +45.063062960447   +0.000000000000   +0.000000000000   +0.000000000000   +0.000000000000
+
+
+	    Symmetry Adapted Mode Decomposition (amplitudes below 10^-2 suppressed)
+	    Mode Index      Amplitude         Irreducible Representation
+	    19             0.602072041853   X5+(0,0;0,0;a,b)[Ti1:b:dsp]T1u(a)
+	    20             0.349031062028   X5+(0,0;0,0;a,b)[Ti1:b:dsp]T1u(b)
+	    21            -0.044698915327   X5+(0,0;0,0;a,b)[O1:c:dsp]A2u(a)
+	    22            -0.025912696162   X5+(0,0;0,0;a,b)[O1:c:dsp]A2u(b)
+	    23            -0.098705771836   X5+(0,0;0,0;a,b)[O1:c:dsp]Eu(a)
+	    24            -0.057221358870   X5+(0,0;0,0;a,b)[O1:c:dsp]Eu(b)
+
+
+Phonon    Frequency         Force Constant    Reduced Mass      Z*_x              Z*_y              Z*_z              |Z*|  [Z* approximate: rigid-ion]
+Mode      (THz)             (eV/A2)           (AMU)             (e)               (e)               (e)               (e)
++23   +0.208011633507   +0.015479183955  +87.432797474003   +0.000000000000   +0.000000000000   +0.000000000000   +0.000000000000
+
+
+	    Symmetry Adapted Mode Decomposition (amplitudes below 10^-2 suppressed)
+	    Mode Index      Amplitude         Irreducible Representation
+	    27             0.706937647566   X5-(0,0;0,0;a,b)[Sr1:a:dsp]T1u(a)
+	    29            -0.015464878074   X5-(0,0;0,0;a,b)[O1:c:dsp]Eu(a)
+
+
+Phonon    Frequency         Force Constant    Reduced Mass      Z*_x              Z*_y              Z*_z              |Z*|  [Z* approximate: rigid-ion]
+Mode      (THz)             (eV/A2)           (AMU)             (e)               (e)               (e)               (e)
++24   +0.208011633507   +0.015479183955  +87.432797474003   +0.000000000000   +0.000000000000   +0.000000000000   +0.000000000000
+
+
+	    Symmetry Adapted Mode Decomposition (amplitudes below 10^-2 suppressed)
+	    Mode Index      Amplitude         Irreducible Representation
+	    28             0.706937647566   X5-(0,0;0,0;a,b)[Sr1:a:dsp]T1u(b)
+	    30            -0.015464878074   X5-(0,0;0,0;a,b)[O1:c:dsp]Eu(b)
+
+
+Phonon    Frequency         Force Constant    Reduced Mass      Z*_x              Z*_y              Z*_z              |Z*|  [Z* approximate: rigid-ion]
+Mode      (THz)             (eV/A2)           (AMU)             (e)               (e)               (e)               (e)
++25   +0.001912783389   +0.000000567474  +37.906693698051  -25.498055837508   +0.000000000489   -0.000000000312  +25.498055837508
+
+
+	    Symmetry Adapted Mode Decomposition (amplitudes below 10^-2 suppressed)
+	    Mode Index      Amplitude         Irreducible Representation
+	    01            -0.492599183966   GM4-(a,b,c)[Sr1:a:dsp]T1u(a)
+	    04            -0.368901318415   GM4-(a,b,c)[Ti1:b:dsp]T1u(a)
+	    07            -0.201545502952   GM4-(a,b,c)[O1:c:dsp]A2u(a)
+	    10            -0.200795002556   GM4-(a,b,c)[O1:c:dsp]Eu(a)
+
+
+Phonon    Frequency         Force Constant    Reduced Mass      Z*_x              Z*_y              Z*_z              |Z*|  [Z* approximate: rigid-ion]
+Mode      (THz)             (eV/A2)           (AMU)             (e)               (e)               (e)               (e)
++26   +0.001912783389   +0.000000567474  +37.906693698051   +0.000000000490  +25.498055837508   +0.000000001821  +25.498055837508
+
+
+	    Symmetry Adapted Mode Decomposition (amplitudes below 10^-2 suppressed)
+	    Mode Index      Amplitude         Irreducible Representation
+	    02             0.492599183966   GM4-(a,b,c)[Sr1:a:dsp]T1u(b)
+	    05             0.368901318415   GM4-(a,b,c)[Ti1:b:dsp]T1u(b)
+	    08             0.201545502952   GM4-(a,b,c)[O1:c:dsp]A2u(b)
+	    11             0.200795002556   GM4-(a,b,c)[O1:c:dsp]Eu(b)
+
+
+Phonon    Frequency         Force Constant    Reduced Mass      Z*_x              Z*_y              Z*_z              |Z*|  [Z* approximate: rigid-ion]
+Mode      (THz)             (eV/A2)           (AMU)             (e)               (e)               (e)               (e)
++27   +0.000202219932   +0.000000006163  +36.833439903242   -0.000000000306   -0.000000001782  +25.322313329184  +25.322313329184
+
+
+	    Symmetry Adapted Mode Decomposition (amplitudes below 10^-2 suppressed)
+	    Mode Index      Amplitude         Irreducible Representation
+	    03             0.488988863380   GM4-(a,b,c)[Sr1:a:dsp]T1u(c)
+	    06             0.362219553704   GM4-(a,b,c)[Ti1:b:dsp]T1u(c)
+	    09             0.208001533363   GM4-(a,b,c)[O1:c:dsp]A2u(c)
+	    12             0.207872856000   GM4-(a,b,c)[O1:c:dsp]Eu(c)
+
+
+Phonon    Frequency         Force Constant    Reduced Mass      Z*_x              Z*_y              Z*_z              |Z*|  [Z* approximate: rigid-ion]
+Mode      (THz)             (eV/A2)           (AMU)             (e)               (e)               (e)               (e)
++28   -0.084753807414   +0.000588373655  +20.018721875028   +6.950861225893   +0.000000000000   +0.000000000000   +6.950861225893
+
+
+	    Symmetry Adapted Mode Decomposition (amplitudes below 10^-2 suppressed)
+	    Mode Index      Amplitude         Irreducible Representation
+	    01            -0.163871695654   GM4-(a,b,c)[Sr1:a:dsp]T1u(a)
+	    04            -0.343195851850   GM4-(a,b,c)[Ti1:b:dsp]T1u(a)
+	    07             0.320560243726   GM4-(a,b,c)[O1:c:dsp]A2u(a)
+	    10             0.355389787701   GM4-(a,b,c)[O1:c:dsp]Eu(a)
+
+
+Phonon    Frequency         Force Constant    Reduced Mass      Z*_x              Z*_y              Z*_z              |Z*|  [Z* approximate: rigid-ion]
+Mode      (THz)             (eV/A2)           (AMU)             (e)               (e)               (e)               (e)
++29   -0.084753807414   +0.000588373655  +20.018721875028   +0.000000000000   +6.950861225893   +0.000000000000   +6.950861225893
+
+
+	    Symmetry Adapted Mode Decomposition (amplitudes below 10^-2 suppressed)
+	    Mode Index      Amplitude         Irreducible Representation
+	    02            -0.163871695654   GM4-(a,b,c)[Sr1:a:dsp]T1u(b)
+	    05            -0.343195851850   GM4-(a,b,c)[Ti1:b:dsp]T1u(b)
+	    08             0.320560243726   GM4-(a,b,c)[O1:c:dsp]A2u(b)
+	    11             0.355389787701   GM4-(a,b,c)[O1:c:dsp]Eu(b)
+
+
+Phonon    Frequency         Force Constant    Reduced Mass      Z*_x              Z*_y              Z*_z              |Z*|  [Z* approximate: rigid-ion]
+Mode      (THz)             (eV/A2)           (AMU)             (e)               (e)               (e)               (e)
++30   -0.086060856385   +0.000616353301  +20.338548786562   +0.000000000000   +0.000000000000   -6.617089420670   +6.617089420670
+
+
+	    Symmetry Adapted Mode Decomposition (amplitudes below 10^-2 suppressed)
+	    Mode Index      Amplitude         Irreducible Representation
+	    03             0.172628184646   GM4-(a,b,c)[Sr1:a:dsp]T1u(c)
+	    06             0.351573909684   GM4-(a,b,c)[Ti1:b:dsp]T1u(c)
+	    09            -0.316245694527   GM4-(a,b,c)[O1:c:dsp]A2u(c)
+	    12            -0.351129574793   GM4-(a,b,c)[O1:c:dsp]Eu(c)
+
+

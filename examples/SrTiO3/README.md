@@ -17,12 +17,16 @@ output, run a VASP DFPT calculation with `IBRION=8` and place `vasprun.xml` in
 this directory alongside the other files.
 
 ## Running the example
-
 ```bash
 cd examples/SrTiO3
 # place your vasprun.xml here
 python ../../scripts/get_phonon_mode_charges.py > output.txt
-diff output.txt expected_output.txt
+python ../../scripts/validate_output.py output.txt expected_output.txt
+```
+
+A passing run prints:
+```
+PASSED — all 30 modes within tolerance 1.00e-06
 ```
 
 ## Notes on this calculation
