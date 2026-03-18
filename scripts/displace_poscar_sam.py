@@ -126,20 +126,37 @@ def main():
     else:
         coord_note = ""
 
-    # Build a label for the output filename
+    # Build filename label — index only, shell-safe
     if ":" in selection_str:
-        label = "combination" + coord_note
+        indices = [part.split(':')[1].strip() for part in selection_str.split(',')]
+        index_label = '+'.join(indices)
     else:
-        idx = int(selection_str)
-        raw_label = sam_labels[idx - 1][1] if len(sam_labels[idx - 1]) > 1 \
-                    else sam_labels[idx - 1][0]
-        label = f"{idx}_{raw_label}{coord_note}"
+        index_label = selection_str.strip()
+
+    direct_note = "_direct" if use_direct else ""
+    filename_label = f"{index_label}{direct_note}"
+
+    # Build POSCAR title label — full human-readable detail
+    if ":" in selection_str:
+        parts = selection_str.split(',')
+        combo_str = ' + '.join(
+            f"SAM {p.split(':')[1].strip()} (w={float(p.split(':')[0]):.3g})"
+            for p in parts
+        )
+        title_label = f"{combo_str} | amplitude: {amplitude} Ang"
+    else:
+        idx = int(selection_str.strip())
+        irrep = sam_labels[idx - 1][1] if len(sam_labels[idx - 1]) > 1 \
+                else sam_labels[idx - 1][0]
+        title_label = f"SAM {idx}: {irrep} | amplitude: {amplitude} Ang"
+    if use_direct:
+        title_label += " | Direct->Cartesian converted"
 
     distorted = support.displace_poscar_atoms(
-        poscar_lines, disp_vector, amplitude, label
+        poscar_lines, disp_vector, amplitude, title_label
     )
 
-    out_name = f"POSCAR_sam_{label}_{amplitude}Ang"
+    out_name = f"POSCAR_sam_{filename_label}_{amplitude}Ang"
     support.write_poscar(distorted, out_name)
     print(f"Written: {out_name}")
     if ":" not in selection_str:

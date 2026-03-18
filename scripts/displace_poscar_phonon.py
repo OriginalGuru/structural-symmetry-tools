@@ -81,15 +81,16 @@ def main():
     # mode_index is 1-based; displacements rows are ordered highest-frequency first
     disp_vector = displacements[mode_index - 1]
 
-    label = f"phonon_mode_{mode_index}"
+    freq = frequencies[mode_index - 1]
+    label = f"phonon mode {mode_index} ({freq:+.6f} THz) | amplitude: {amplitude} Ang"
     distorted = support.displace_poscar_atoms(
         poscar_lines, disp_vector, amplitude, label
     )
 
-    out_name = f"POSCAR_phonon_{mode_index}_{amplitude}Ang"
+    out_name = f"POSCAR_phonon_{mode_index}_{freq:+.3f}THz_{amplitude}Ang"
     support.write_poscar(distorted, out_name)
     print(f"Written: {out_name}")
-    print(f"  Mode {mode_index}: {frequencies[mode_index - 1]:+.6f} THz")
+    print(f"  Mode {mode_index}: {freq:+.6f} THz")
     print(f"  Amplitude: {amplitude} Ang")
 
 
