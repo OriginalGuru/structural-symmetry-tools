@@ -27,3 +27,4 @@ XDATCAR
 !examples/*/symmetry_basis
 !examples/*/symmetry_list
 !examples/*/expected_output.txt
+examples/*/output.txt
