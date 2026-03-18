@@ -1,0 +1,29 @@
+__pycache__/
+*.pyc
+*.pyo
+.env
+venv/
+*.egg-info/
+dist/
+build/
+.DS_Store
+
+# VASP files that should not be committed
+WAVECAR
+CHGCAR
+CHG
+PROCAR
+IBZKPT
+vasprun.xml
+OUTCAR
+EIGENVAL
+DOSCAR
+OSZICAR
+CONTCAR
+XDATCAR
+
+# Keep example POSCAR and symmetry files but not large VASP outputs
+!examples/*/POSCAR
+!examples/*/symmetry_basis
+!examples/*/symmetry_list
+!examples/*/expected_output.txt
