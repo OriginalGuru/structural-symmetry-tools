@@ -30,3 +30,5 @@ XDATCAR
 examples/*/output.txt
 examples/*/vasprun.xml
 examples/*/output.txt
+examples/ReS2_164_slab/POSCAR_*
+examples/ReS2_164_slab/findsym*
