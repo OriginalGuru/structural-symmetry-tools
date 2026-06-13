@@ -32,3 +32,4 @@ examples/*/vasprun.xml
 examples/*/output.txt
 examples/ReS2_164_slab/POSCAR_*
 examples/ReS2_164_slab/findsym*
+examples/ReS2_164_slab/old_structure/
