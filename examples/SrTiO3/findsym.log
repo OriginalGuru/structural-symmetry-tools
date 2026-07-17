@@ -1,0 +1,55 @@
+FINDSYM, Version 7.1.6, Oct 2023
+Written by Harold T. Stokes, Branton J. Campbell, and Dorian M. Hatch
+Brigham Young University
+
+SrTiO3 experiment (#2)
+
+Lattice vectors in cartesian coordinates:
+   3.90000   0.00000   0.00000
+   0.00000   3.90000   0.00000
+   0.00000   0.00000   7.80000
+Lattice parameters, a,b,c,alpha,beta,gamma:
+   3.90000   3.90000   7.80000  90.00000  90.00000  90.00000
+Centering: P
+Number of atoms in unit cell:
+   10
+Type of each atom:
+2*Sr 2*Ti 6*O 
+         Position                     
+    1 Sr  0.00000  0.00000  0.00000  
+    2 Sr  0.00000  0.00000  0.50000  
+    3 Ti  0.50000  0.50000  0.25000  
+    4 Ti  0.50000  0.50000  0.75000  
+    5 O   0.50000  0.50000  0.00000  
+    6 O   0.50000  0.50000  0.50000  
+    7 O   0.50000  0.00000  0.25000  
+    8 O   0.50000  0.00000  0.75000  
+    9 O   0.00000  0.50000  0.25000  
+   10 O   0.00000  0.50000  0.75000  
+
+Tolerance of lattice:   0.00001
+Tolerance of atomic position:   0.00100
+Tolerance of occupation:   0.00100
+------------------------------------------
+Space Group: 221  Oh-1      Pm-3m     
+Origin at   -0.00000   0.00000   0.00000
+Vectors a,b,c:
+  -1.00000   0.00000   0.00000
+   0.00000   1.00000   0.00000
+   0.00000   0.00000  -0.50000
+Values of a,b,c,alpha,beta,gamma:
+   3.90000   3.90000   3.90000  90.00000  90.00000  90.00000
+Ratio of new/old primtive cell volumes = 2
+Atomic positions and occupancies in terms of a,b,c:
+Wyckoff position a (Sr1)
+    1  -0.00000   0.00000   0.00000     1.00000
+    RMS position shift  = 0.00000, MAX position shift  = 0.00000
+Wyckoff position b (Ti1)
+    3   0.50000   0.50000   0.50000     1.00000
+    RMS position shift  = 0.00000, MAX position shift  = 0.00000
+Wyckoff position c (O1)
+    9  -0.00000   0.50000   0.50000     1.00000
+    7   0.50000   0.00000   0.50000     1.00000
+    5   0.50000   0.50000   0.00000     1.00000
+    RMS position shift  = 0.00000, MAX position shift  = 0.00000
+------------------------------------------
